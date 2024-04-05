@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  /* font-family: cursive; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +11,115 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.tool-bar {
+  background-color: white;
+  color: white;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0px 0px 5px 0 black;
+  padding: 6px;
+}
+
+.sidebar>li>a {
+  color: navy;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: -2px;
+  height: 100vh;
+  width: 360px;
+  transform: translateX(-100%);
+  transition: all 0.4s;
+  box-shadow: 1px 3px 5px 0px gray;
+  font-weight: bold;
+}
+
+.sidebar li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.sidebar--open {
+  transform: translateX(0%);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 60%; */
+  height: 100vh;
+  background-color: white;
+  display: none;
+}
+
+.backdrop--open {
+  display: block;
+  background-color: transparent
+}
+
+.title {
+  font-size: 30px;
+}
+
+.burger {
+  padding: 12px;
+  display: flex;
+  color: navy;
+  justify-content: flex-end;
+}
+
+/* table,
+th,
+td {
+  border: 1px solid red;
+  border-collapse: collapse;
+} */
+
+table {
+  width: 96%;
+}
+
+.mainTable {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 52px;
+  height: 50px;
+  object-fit: inherit;
+  object-position: inherit;
+  text-align: center;
+}
+
+.image {
+  position: fixed;
+  top: 78%;
+  right: 1%;
+  opacity: 0.7;
+}
+
+.image.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
